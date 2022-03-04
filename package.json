@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/thinkkoa/koatty_cli.git"
+    "url": "git+https://github.com/thinkkoa/koatty_template_cli.git"
   },
   "engines": {
     "node": ">10.0.0"
@@ -21,9 +21,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/thinkkoa/koatty_cli/issues"
+    "url": "https://github.com/thinkkoa/koatty_template_cli/issues"
   },
-  "homepage": "https://github.com/thinkkoa/koatty_cli",
+  "homepage": "https://github.com/thinkkoa/koatty_template_cli",
   "devDependencies": {
     "eslint": "^8.x.x",
     "eslint-plugin-jest": "^25.x.x",
