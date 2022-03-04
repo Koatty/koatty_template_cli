@@ -1,0 +1,12 @@
+
+  /**
+   * _METHOD_NAME 接口
+   *
+   * @param {_REQUEST_TYPE} data
+   * @returns
+   */
+  @RequestMapping('/_METHOD_NAME') // Consistent with proto.service.method name
+  _METHOD_NAME(@RequestBody() params: _REQUEST_TYPE): Promise<_RESPONSE_TYPE> {
+    const res = _RESPONSE_RETURN
+    return Promise.resolve(res);
+  }

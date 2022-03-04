@@ -1,0 +1,19 @@
+/*
+ * @Description: AOP切面类
+ * @Usage: 
+ * @Author: xxx
+ * @Date: 2020-12-22 15:24:25
+ * @LastEditTime: 2021-11-21 00:26:51
+ */
+ 
+import { Aspect, IAspect } from "koatty";
+import { App } from '_SUB_PATH/App';
+
+@Aspect()
+export class _CLASS_NAME implements IAspect {
+    app: App;
+
+    run() {
+        console.log('TestAspect');
+    }
+}

@@ -1,0 +1,40 @@
+/*
+ * @Description: 业务层
+ * @Usage: 接收处理路由参数
+ * @Author: xxx
+ * @Date: 2020-12-22 15:24:25
+ * @LastEditTime: 2021-11-30 17:34:52
+ */
+
+import { KoattyContext, Controller, HttpController, Autowired, GetMapping } from 'koatty';
+import { App } from '_SUB_PATH/App';
+// import { TestService } from '_SUB_PATH/service/TestService';
+
+@Controller('_NEW')
+export class _CLASS_NAME extends HttpController {
+  app: App;
+  ctx: KoattyContext;
+
+  // @Autowired()
+  // protected TestService: TestService;
+
+  /**
+   * Custom constructor
+   *
+   */
+  init() {
+      //todo
+  }
+
+  /**
+   * index 接口
+   *
+   * @returns
+   * @memberof _CLASS_NAME
+   */
+  @GetMapping('/')
+  index(): Promise<any> {
+    return this.ok('Hi Koatty');
+  }
+
+}

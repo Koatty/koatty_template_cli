@@ -1,0 +1,33 @@
+{
+  "name": "koatty_template_cli",
+  "version": "1.0.0",
+  "description": "Koatty command line tool.",
+  "scripts": {
+    "eslint": "eslint --ext .js ./src",
+    "prepublishOnly": "npm test",
+    "release": "npm run prepublishOnly && standard-version",
+    "test": "npm run eslint && jest --rootDir ./test --passWithNoTests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thinkkoa/koatty_cli.git"
+  },
+  "engines": {
+    "node": ">10.0.0"
+  },
+  "author": {
+    "name": "richenlin",
+    "email": "richenlin@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thinkkoa/koatty_cli/issues"
+  },
+  "homepage": "https://github.com/thinkkoa/koatty_cli",
+  "devDependencies": {
+    "eslint": "^8.x.x",
+    "eslint-plugin-jest": "^25.x.x",
+    "jest": "^27.x.x",
+    "standard-version": "^9.x.x"
+  }
+}
