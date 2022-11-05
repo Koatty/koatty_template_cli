@@ -3,15 +3,15 @@
  * @Usage: 接收处理路由参数
  * @Author: xxx
  * @Date: 2020-12-22 15:24:25
- * @LastEditTime: 2021-11-30 17:34:52
+ * @LastEditTime: 2022-11-05 12:04:43
  */
 
-import { KoattyContext, Controller, HttpController, Autowired, GetMapping } from 'koatty';
+import { KoattyContext, Controller, BaseController, Autowired, GetMapping } from 'koatty';
 import { App } from '_SUB_PATH/App';
 // import { TestService } from '_SUB_PATH/service/TestService';
 
 @Controller('_NEW')
-export class _CLASS_NAME extends HttpController {
+export class _CLASS_NAME extends BaseController {
   app: App;
   ctx: KoattyContext;
 
