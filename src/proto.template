@@ -1,5 +1,11 @@
 syntax = "proto3";
 
+package pb;
+option go_package = "github.com/koatty/proto;pb";
+
+// import "google/protobuf/any.proto"; // 用于any类型声明
+// import "github.com/envoyproxy/protoc-gen-validate/validate/validate.proto"; // 用于参数验证规则
+
 service _CLASS_NAME {
   rpc SayHello(SayHelloRequest) returns (SayHelloReply) {}
 }
@@ -13,7 +19,8 @@ message SayHelloRequest {
 message SayHelloReply { string message = 1; }
 
 enum PhoneType {
-  MOBILE = 0; // proto3版本中，首成员必须为0，成员不应有相同的值
+  MOBILE = 0; 
   HOME = 1;
   WORK = 2;
 }
+
