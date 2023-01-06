@@ -3,8 +3,10 @@ syntax = "proto3";
 package pb;
 option go_package = "github.com/koatty/proto;pb";
 
-// import "google/protobuf/any.proto"; // 用于any类型声明
-// import "github.com/envoyproxy/protoc-gen-validate/validate/validate.proto"; // 用于参数验证规则
+// 用于any类型声明
+// import "google/protobuf/any.proto"; 
+// 用于参数验证规则
+// import "github.com/envoyproxy/protoc-gen-validate/validate/validate.proto"; 
 
 service _CLASS_NAME {
   rpc SayHello(SayHelloRequest) returns (SayHelloReply) {}
