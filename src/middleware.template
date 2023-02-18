@@ -3,26 +3,26 @@
  * @Usage: 
  * @Author: xxx
  * @Date: 2020-12-22 15:24:25
- * @LastEditTime: 2022-03-04 15:29:19
+ * @LastEditTime: 2023-02-18 15:01:34
  */
 
 import { KoattyContext, Middleware, IMiddleware, KoattyNext } from 'koatty';
 import { App } from '_SUB_PATH/App';
 
 const defaultOpt = {
-    //默认配置项
+  //默认配置项
 };
 
 
 @Middleware()
 export class _CLASS_NAME implements IMiddleware {
-    run(options: any, app: App) {
-        options = {...defaultOpt, ...options};
-        //应用启动执行一次
-        // todo
-        
-        return function (ctx: KoattyContext, next: KoattyNext) {
-            return next();
-        };
-    }
+  run(options: any, app: App) {
+    options = {...defaultOpt, ...options};
+    //应用启动执行一次
+    // todo
+    
+    return function (ctx: KoattyContext, next: KoattyNext) {
+      return next();
+    };
+  }
 }

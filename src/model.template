@@ -3,7 +3,7 @@
  * @Usage: 
  * @Author: xxx
  * @Date: 2020-12-22 15:24:25
- * @LastEditTime: 2021-11-21 00:26:19
+ * @LastEditTime: 2023-02-18 15:02:47
  */
 import { BaseModel, Entity, PrimaryColumn, Column } from "thinkorm";
 import { Component, Value } from 'koatty';
@@ -12,14 +12,14 @@ import { App } from '_SUB_PATH/App';
 @Component()
 @Entity('_NEW')
 export class _CLASS_NAME extends BaseModel {
-    app: App;
+  app: App;
 
-    @Value("database", "db")
-    config: any;
+  @Value("database", "db")
+  config: any;
 
-    @PrimaryColumn()
-    id: number;
+  @PrimaryColumn()
+  id: number;
 
-    @Column(20, '', true, true)
-    name: string;
+  @Column(20, '', true, true)
+  name: string;
 }

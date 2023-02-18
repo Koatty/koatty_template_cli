@@ -3,7 +3,7 @@
  * @Usage: 
  * @Author: xxx
  * @Date: 2020-12-22 15:24:25
- * @LastEditTime: 2021-11-21 00:27:09
+ * @LastEditTime: 2023-02-18 15:03:38
  */
 
 import { Plugin, IPlugin, Helper } from "koatty";
@@ -11,7 +11,7 @@ import { App } from '_SUB_PATH/App';
 
 @Plugin()
 export class _CLASS_NAME implements IPlugin {
-    run(options: any, app: App) {
-        // todo...
-    }
+  run(options: any, app: App) {
+    // todo...
+  }
 }

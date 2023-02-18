@@ -3,7 +3,7 @@
  * @Usage: 接收处理路由参数
  * @Author: xxx
  * @Date: 2020-12-22 15:24:25
- * @LastEditTime: 2022-11-05 12:04:43
+ * @LastEditTime: 2023-02-18 15:02:01
  */
 
 import { KoattyContext, Controller, BaseController, Autowired, GetMapping } from 'koatty';
@@ -23,7 +23,7 @@ export class _CLASS_NAME extends BaseController {
    *
    */
   init() {
-      //todo
+    //todo
   }
 
   /**

@@ -3,7 +3,7 @@
  * @Usage: 接收处理路由参数
  * @Author: xxx
  * @Date: 2020-12-22 15:24:25
- * @LastEditTime: 2023-02-16 18:13:20
+ * @LastEditTime: 2023-02-18 15:02:29
  */
 
 import { KoattyContext, Controller, BaseController, Autowired, PostMapping, Post } from 'koatty';
@@ -20,7 +20,7 @@ export class _CLASS_NAME extends BaseController {
    *
    */
   init() {
-      //todo
+    //todo
   }
 
   //_METHOD_LIST Important! Do not delete this line
