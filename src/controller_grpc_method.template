@@ -2,7 +2,7 @@
   /**
    * _METHOD_NAME 接口
    *
-   * @param {_REQUEST_TYPE} data
+   * @param {_REQUEST_TYPE} params
    * @returns
    */
   @PostMapping('/_METHOD_NAME') // Consistent with proto.service.method name
