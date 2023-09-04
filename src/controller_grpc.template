@@ -3,10 +3,11 @@
  * @Usage: 接收处理路由参数
  * @Author: xxx
  * @Date: 2020-12-22 15:24:25
- * @LastEditTime: 2023-02-18 15:02:29
+ * @LastEditTime: 2023-09-04 17:19:35
  */
 
 import { KoattyContext, Controller, BaseController, Autowired, PostMapping, Post } from 'koatty';
+import { Valid, Validated } from "koatty_validation";
 import { App } from '_SUB_PATH/App';
 //_IMPORT_LIST Important! Do not delete this line
 
