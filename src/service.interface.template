@@ -4,10 +4,9 @@
  * 使用Autowired注入:
    @Autowired()
    _CAMEL_NAME: I_CLASS_NAME;
-
  * @Author: xxx
  * @Date: 2020-12-22 15:24:25
- * @LastEditTime: 2023-09-11 11:28:07
+ * @LastEditTime: 2023-09-11 11:29:44
  */
 
 export interface I_CLASS_NAME {
