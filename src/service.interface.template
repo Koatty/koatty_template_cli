@@ -1,12 +1,12 @@
 /*
- * @Description: 逻辑层
+ * @Description: 逻辑接口层
  * @Usage: 
  * 使用Autowired注入:
    @Autowired()
    _CAMEL_NAME: I_CLASS_NAME;
  * @Author: xxx
  * @Date: 2020-12-22 15:24:25
- * @LastEditTime: 2023-09-11 11:29:44
+ * @LastEditTime: 2023-09-11 11:49:20
  */
 
 export interface I_CLASS_NAME {
