@@ -3,11 +3,12 @@
  * @Usage: 
  * @Author: xxx
  * @Date: 2020-12-22 15:24:25
- * @LastEditTime: 2023-09-11 10:42:32
+ * @LastEditTime: 2023-09-11 11:15:19
  */
 
 import { Service, BaseService } from "koatty";
 import { App } from '_SUB_PATH/App';
+import { I_CLASS_NAME } from '../I_CLASS_NAME';
 
 @Service()
 export class _CLASS_NAME extends BaseService implements I_CLASS_NAME  {

@@ -3,9 +3,13 @@
  * @Usage: 
  * @Author: xxx
  * @Date: 2020-12-22 15:24:25
- * @LastEditTime: 2023-09-11 10:43:43
+ * @LastEditTime: 2023-09-11 11:14:42
  */
 
 export interface I_CLASS_NAME {
-
+  /**
+   * @description: 测试方法待实现
+   * @return {*}
+   */
+  test(): void;
 }
