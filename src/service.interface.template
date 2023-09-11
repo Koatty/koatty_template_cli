@@ -1,0 +1,11 @@
+/*
+ * @Description: 逻辑层
+ * @Usage: 
+ * @Author: xxx
+ * @Date: 2020-12-22 15:24:25
+ * @LastEditTime: 2023-09-11 10:43:43
+ */
+
+export interface I_CLASS_NAME {
+
+}
