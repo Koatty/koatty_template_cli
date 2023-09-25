@@ -1,27 +1,36 @@
 /*
  * @Description: 业务异常全局处理
  * @Usage: 
- * @Author: xxx
+ * @Author: richen
  * @Date: 2022-02-14 11:26:20
- * @LastEditTime: 2023-09-11 16:49:46
+ * @LastEditTime: 2023-09-25 19:29:23
  */
 
-import { KoattyContext, Exception, ExceptionHandler } from "koatty";
+import { KoattyContext } from "koatty_core";
+import { Exception, ExceptionHandler } from "koatty_exception";
 
 @ExceptionHandler()
-export class _CLASS_NAME extends Exception {
+export class BussinessException extends Exception {
   async handler(ctx: KoattyContext): Promise<any> {
     ctx.status = this.status;
     ctx.type = "application/json";
-    const body: any = ctx.body ? JSON.stringify(ctx.body) : (ctx.body || null);
+    const body: any = JSON.stringify(ctx.body || null);
     switch (ctx.protocol) {
       case "ws":
       case "wss":
-        return ctx.websocket.send(body, () => ctx.websocket.emit('finish'));
+        if (ctx.websocket) {
+          ctx.websocket.send(body);
+          ctx.websocket.emit('finish');
+        }
+        break;
       case "grpc":
-        return ctx.rpc.callback(null, body);
+        if (ctx.rpc && ctx.rpc.callback) {
+          ctx.rpc.callback(null, body);
+        }
+        break;
       default:
-        return ctx.res.end(`{"code": ${this.code}, "message": "${this.message || ctx.message}", "data": ${body}}`);
+        ctx.res.end(`{"code": ${this.code}, "message": "${this.message || ctx.message}", "data": ${body}}`);
+        break;
     }
   }
 }
