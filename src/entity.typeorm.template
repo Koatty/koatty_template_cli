@@ -7,7 +7,6 @@
  */
 import { Entity, PrimaryGeneratedColumn, CreateDateColumn, Column, UpdateDateColumn, BaseEntity } from "typeorm";
 import { Component } from 'koatty';
-import { App } from '_SUB_PATH/App';
 
 @Component()
 @Entity('_NEW')
