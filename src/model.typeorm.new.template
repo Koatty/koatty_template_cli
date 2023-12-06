@@ -1,0 +1,92 @@
+/*
+ * @Description: 数据持久层
+ * @Usage: 
+ * @Author: xxx
+ * @Date: 2020-12-22 15:24:25
+ * @LastEditTime: 2023-12-06 20:41:16
+ */
+import { Component } from 'koatty';
+import { App } from '_SUB_PATH/App';
+import { _ENTITY_NAME } from './_ENTITY_NAME';
+import { FindOptionsWhere, OrderByCondition, SaveOptions } from 'typeorm';
+
+@Component()
+export class _CLASS_NAME {
+  app: App;
+  /**
+   * Find
+   * @param where 
+   * @returns  
+   */
+  Find(where: FindOptionsWhere<_ENTITY_NAME>) {
+    return _ENTITY_NAME.findOneBy(where);
+  }
+
+  /**
+   * FindAll
+   * @param where 
+   * @returns 
+   */
+  FindAll(where: FindOptionsWhere<_ENTITY_NAME>) {
+    return _ENTITY_NAME.findBy(where);
+  }
+  /**
+   * Pagination
+   * @param where 
+   * @param pageNo 
+   * @param pageSize 
+   * @param orderBy 
+   * @returns 
+   */
+  async Pagination(where: _ENTITY_NAME,
+    pageNo: number = 1, pageSize: number = 10, orderBy?: OrderByCondition) {
+    const builder = await _ENTITY_NAME.createQueryBuilder().where(where);
+    const count = await builder.getCount();
+    const skip = ((pageNo > 0 ? pageNo : 1) - 1) * pageSize;
+    const lastPage = (count % pageSize) === 0 ? count / pageSize : Math.trunc(count / pageSize) + 1;
+    const res = await builder
+      .orderBy(orderBy)
+      .skip(skip)
+      .take(pageSize)
+      .getMany();
+    return {
+      pageNo: pageNo,
+      pageSize: pageSize,
+      prevPage: pageNo > 1 ? (pageNo - 1) : 1,
+      nextPage: count > (skip + pageSize) ? pageNo + 1 : pageNo,
+      lastPage: lastPage,
+      from: skip <= count ? skip + 1 : 0,
+      to: (count > skip + pageSize) ? skip + pageSize : count,
+      total: count,
+      data: res || []
+    }
+  }
+
+  /**
+   * Add
+   * @param entity 
+   * @returns 
+   */
+  Add(entity: _ENTITY_NAME | _ENTITY_NAME[]) {
+    return _ENTITY_NAME.insert(entity)
+  }
+
+  /**
+   * Save
+   * @param entities 
+   * @param options 
+   * @returns 
+   */
+  Save(entities: _ENTITY_NAME[], options?: SaveOptions) {
+    return _ENTITY_NAME.save(entities, options);
+  }
+
+  /**
+   * Delete
+   * @param where 
+   * @returns 
+   */
+  Delete(where: FindOptionsWhere<_ENTITY_NAME>) {
+    return _ENTITY_NAME.delete(where);
+  }
+}

@@ -1,0 +1,28 @@
+/*
+ * @Description: 数据持久层
+ * @Usage: 
+ * @Author: xxx
+ * @Date: 2020-12-22 15:24:25
+ * @LastEditTime: 2023-12-06 20:21:36
+ */
+import { Entity, PrimaryGeneratedColumn, CreateDateColumn, Column, UpdateDateColumn, BaseEntity } from "typeorm";
+import { Component } from 'koatty';
+import { App } from '_SUB_PATH/App';
+
+@Component()
+@Entity('_NEW')
+export class _ENTITY_NAME extends BaseEntity {
+  app: App;
+
+  @PrimaryGeneratedColumn()
+  id: number;
+
+  @Column()
+  name: string;
+
+  @CreateDateColumn()
+  createdDate: Date;
+
+  @UpdateDateColumn()
+  updatedDate: Date;
+}
