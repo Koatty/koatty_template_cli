@@ -3,7 +3,7 @@
  * @Usage: 
  * @Author: xxx
  * @Date: 2020-12-22 15:24:25
- * @LastEditTime: 2023-12-24 11:40:05
+ * @LastEditTime: 2023-12-24 13:03:52
  */
 import { Component } from 'koatty';
 import { App } from '_SUB_PATH/App';
@@ -38,7 +38,7 @@ export class _CLASS_NAME {
    * @param orderBy 
    * @returns 
    */
-  async Pagination(where: _ENTITY_NAME,
+  async Pagination(where: FindOptionsWhere<_ENTITY_NAME>,
     pageNo: number = 1, pageSize: number = 10, orderBy?: OrderByCondition) {
     const builder = await _ENTITY_NAME.createQueryBuilder().where(where);
     const count = await builder.getCount();
