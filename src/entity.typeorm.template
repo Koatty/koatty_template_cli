@@ -3,9 +3,12 @@
  * @Usage: 
  * @Author: xxx
  * @Date: 2020-12-22 15:24:25
- * @LastEditTime: 2023-12-06 21:00:38
+ * @LastEditTime: 2023-12-24 11:41:18
  */
-import { Entity, PrimaryGeneratedColumn, CreateDateColumn, Column, UpdateDateColumn, BaseEntity } from "typeorm";
+import {
+  Entity, PrimaryGeneratedColumn, CreateDateColumn,
+  Column, UpdateDateColumn, BaseEntity
+} from "typeorm";
 import { Component } from 'koatty';
 
 @Component()
