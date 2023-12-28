@@ -3,11 +3,11 @@
  * @Usage: 
  * @Author: xxx
  * @Date: 2020-12-22 15:24:25
- * @LastEditTime: 2023-12-24 13:03:52
+ * @LastEditTime: 2023-12-29 07:56:03
  */
 import { Component } from 'koatty';
 import { App } from '_SUB_PATH/App';
-import { _ENTITY_NAME } from './_ENTITY_NAME';
+import { _ENTITY_NAME } from './entity/_ENTITY_NAME';
 import { FindOptionsWhere, OrderByCondition, SaveOptions } from 'typeorm';
 
 @Component()
