@@ -3,7 +3,7 @@
  * @Usage: 
  * @Author: xxx
  * @Date: 2020-12-22 15:24:25
- * @LastEditTime: 2023-12-24 11:41:18
+ * @LastEditTime: 2023-12-28 21:31:04
  */
 import {
   Entity, PrimaryGeneratedColumn, CreateDateColumn,
@@ -15,7 +15,7 @@ import { Component } from 'koatty';
 @Entity('_NEW')
 export class _ENTITY_NAME extends BaseEntity {
   
-  @PrimaryGeneratedColumn()
+  @PrimaryGeneratedColumn({type: "bigint"})
   id: number;
 
   @Column()
