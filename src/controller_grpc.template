@@ -3,17 +3,17 @@
  * @Usage: 接收处理路由参数
  * @Author: xxx
  * @Date: 2020-12-22 15:24:25
- * @LastEditTime: 2024-01-04 06:15:39
+ * @LastEditTime: 2024-01-04 07:47:07
  */
 
 import { KoattyContext, Controller, Autowired,
- PostMapping, Post, IContainer } from 'koatty';
+ PostMapping, Post } from 'koatty';
 import { Valid, Validated } from "koatty_validation";
 import { App } from '_SUB_PATH/App';
 //_IMPORT_LIST Important! Do not delete this line
 
 @Controller('_NEW') // Consistent with proto.service name
-export class _CLASS_NAME implements IContainer {
+export class _CLASS_NAME {
   app: App;
   ctx: KoattyContext;
 

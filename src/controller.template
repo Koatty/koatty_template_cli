@@ -3,16 +3,16 @@
  * @Usage: 接收处理路由参数
  * @Author: xxx
  * @Date: 2020-12-22 15:24:25
- * @LastEditTime: 2024-01-04 06:54:39
+ * @LastEditTime: 2024-01-04 07:47:39
  */
 
 import { KoattyContext, Controller, Autowired, GetMapping,
- IContainer, Output } from 'koatty';
+ Output } from 'koatty';
 import { App } from '_SUB_PATH/App';
 // import { TestService } from '_SUB_PATH/service/TestService';
 
 @Controller('_NEW')
-export class _CLASS_NAME implements IContainer {
+export class _CLASS_NAME {
   app: App;
   ctx: KoattyContext;
 
