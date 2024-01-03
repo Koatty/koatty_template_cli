@@ -3,12 +3,12 @@
  * @Usage: 接收处理路由参数
  * @Author: xxx
  * @Date: 2020-12-22 15:24:25
- * @LastEditTime: 2024-01-04 05:55:37
+ * @LastEditTime: 2024-01-04 06:13:21
  */
 
 import { KoattyContext, Controller, Autowired, GetMapping, Output } from 'koatty';
 import { App } from '_SUB_PATH/App';
-// import { TestService } from '_SUB_PATH/service/TestService';
+// import { ITestService } from '_SUB_PATH/service/ITestService';
 
 @Controller('_NEW')
 export class _CLASS_NAME {
@@ -16,7 +16,7 @@ export class _CLASS_NAME {
   ctx: KoattyContext;
 
   // @Autowired()
-  // protected TestService: TestService;
+  // protected TestService: ITestService;
 
   /**
    * constructor
