@@ -3,15 +3,15 @@
  * @Usage: 
  * @Author: xxx
  * @Date: 2020-12-22 15:24:25
- * @LastEditTime: 2023-12-29 08:23:17
+ * @LastEditTime: 2024-01-04 05:58:22
  */
 
-import { Plugin, IPlugin, Helper } from "koatty";
+import { Plugin, Helper } from "koatty";
 import { KoattyTypeORM } from 'koatty_typeorm';
 import { App } from '_SUB_PATH/App';
 
 @Plugin()
-export class TypeormPlugin implements IPlugin {
+export class TypeormPlugin {
   run(options: any, app: App) {
     return KoattyTypeORM(options, app);
   }

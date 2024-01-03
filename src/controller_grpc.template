@@ -3,25 +3,25 @@
  * @Usage: 接收处理路由参数
  * @Author: xxx
  * @Date: 2020-12-22 15:24:25
- * @LastEditTime: 2023-09-04 17:19:35
+ * @LastEditTime: 2024-01-04 05:54:08
  */
 
-import { KoattyContext, Controller, BaseController, Autowired, PostMapping, Post } from 'koatty';
+import { KoattyContext, Controller, Autowired, PostMapping, Post } from 'koatty';
 import { Valid, Validated } from "koatty_validation";
 import { App } from '_SUB_PATH/App';
 //_IMPORT_LIST Important! Do not delete this line
 
 @Controller('_NEW') // Consistent with proto.service name
-export class _CLASS_NAME extends BaseController {
+export class _CLASS_NAME {
   app: App;
   ctx: KoattyContext;
 
   /**
-   * Custom constructor
+   * constructor
    *
    */
-  init() {
-    //todo
+  constructor(ctx: KoattyContext) {
+    this.ctx = ctx;
   }
 
   //_METHOD_LIST Important! Do not delete this line

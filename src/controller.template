@@ -3,15 +3,15 @@
  * @Usage: 接收处理路由参数
  * @Author: xxx
  * @Date: 2020-12-22 15:24:25
- * @LastEditTime: 2023-02-18 15:02:01
+ * @LastEditTime: 2024-01-04 05:55:37
  */
 
-import { KoattyContext, Controller, BaseController, Autowired, GetMapping } from 'koatty';
+import { KoattyContext, Controller, Autowired, GetMapping, Output } from 'koatty';
 import { App } from '_SUB_PATH/App';
 // import { TestService } from '_SUB_PATH/service/TestService';
 
 @Controller('_NEW')
-export class _CLASS_NAME extends BaseController {
+export class _CLASS_NAME {
   app: App;
   ctx: KoattyContext;
 
@@ -19,11 +19,11 @@ export class _CLASS_NAME extends BaseController {
   // protected TestService: TestService;
 
   /**
-   * Custom constructor
+   * constructor
    *
    */
-  init() {
-    //todo
+  constructor(ctx: KoattyContext) {
+    this.ctx = ctx;
   }
 
   /**
@@ -34,7 +34,7 @@ export class _CLASS_NAME extends BaseController {
    */
   @GetMapping('/')
   index(): Promise<any> {
-    return this.ok('Hi Koatty');
+    return Output.ok(this.ctx, 'Hi Koatty');
   }
 
 }

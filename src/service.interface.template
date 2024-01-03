@@ -6,12 +6,13 @@
    _CAMEL_NAME: I_CLASS_NAME;
  * @Author: xxx
  * @Date: 2020-12-22 15:24:25
- * @LastEditTime: 2023-09-11 11:49:20
+ * @LastEditTime: 2024-01-04 05:59:30
  */
+import { IService } from "koatty";
 
-export interface I_CLASS_NAME {
+export interface I_CLASS_NAME extends IService {
   /**
-   * @description: 测试方法待实现
+   * @description: 
    * @return {*}
    */
   test(): void;
