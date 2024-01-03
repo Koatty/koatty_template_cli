@@ -3,14 +3,14 @@
  * @Usage: 
  * @Author: xxx
  * @Date: 2020-12-22 15:24:25
- * @LastEditTime: 2024-01-04 05:53:14
+ * @LastEditTime: 2024-01-04 06:14:55
  */
  
-import { Aspect } from "koatty";
+import { Aspect, IAspect } from "koatty";
 import { App } from '_SUB_PATH/App';
 
 @Aspect()
-export class _CLASS_NAME {
+export class _CLASS_NAME implements IAspect {
   app: App;
 
   run() {

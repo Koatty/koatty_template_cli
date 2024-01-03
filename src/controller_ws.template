@@ -6,12 +6,13 @@
  * @LastEditTime: 2024-01-04 06:13:12
  */
 
-import { KoattyContext, Controller, Autowired, RequestMapping, RequestBody } from 'koatty';
+import { KoattyContext, Controller, Autowired, IContainer,
+ RequestMapping, RequestBody } from 'koatty';
 import { App } from '_SUB_PATH/App';
 // import { ITestService } from '_SUB_PATH/service/ITestService';
 
 @Controller('_NEW')
-export class _CLASS_NAME {
+export class _CLASS_NAME implements IContainer {
   app: App;
   ctx: KoattyContext;
 
