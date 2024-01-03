@@ -3,7 +3,7 @@
  * @Usage: 
  * @Author: richen
  * @Date: 2022-02-14 11:26:20
- * @LastEditTime: 2024-01-03 13:55:39
+ * @LastEditTime: 2024-01-03 14:15:17
  */
 
 import { Exception, ExceptionHandler, KoattyContext } from "koatty";
@@ -12,6 +12,14 @@ import { Exception, ExceptionHandler, KoattyContext } from "koatty";
 export class _CLASS_NAME extends Exception {
   async handler(ctx: KoattyContext): Promise<any> {
     ctx.status = this.status;
+    // if (ctx.protocol !== "grpc") {
+    //   // api mode the status always be 200
+    //   if (this.code <= 1) {
+    //     this.code = this.status;
+    //   }
+    //   ctx.status = 200;
+    // }
+
     ctx.type = "application/json";
     const body: any = JSON.stringify(ctx.body || null);
     switch (ctx.protocol) {
