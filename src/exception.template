@@ -3,7 +3,7 @@
  * @Usage: 
  * @Author: richen
  * @Date: 2022-02-14 11:26:20
- * @LastEditTime: 2024-01-03 14:16:53
+ * @LastEditTime: 2024-01-05 06:50:04
  */
 
 import { Exception, ExceptionHandler, KoattyContext } from "koatty";
@@ -12,6 +12,7 @@ import { Exception, ExceptionHandler, KoattyContext } from "koatty";
 export class _CLASS_NAME extends Exception {
   async handler(ctx: KoattyContext): Promise<any> {
     ctx.status = this.status;
+    this.message = this.message || ctx.message;
     // if (ctx.protocol !== "grpc") {
     //   // api mode the status always be 200
     //   if (this.code <= 1) {
@@ -36,7 +37,7 @@ export class _CLASS_NAME extends Exception {
         }
         break;
       default:
-        ctx.res.end(`{"code": ${this.code}, "message": "${this.message || ctx.message}", "data": ${body}}`);
+        ctx.res.end(`{"code": ${this.code}, "message": "${this.message}", "data": ${body}}`);
         break;
     }
   }
