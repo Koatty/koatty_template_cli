@@ -3,7 +3,7 @@
  * @Usage: 接收处理路由参数
  * @Author: xxx
  * @Date: 2020-12-22 15:24:25
- * @LastEditTime: 2024-01-04 07:47:25
+ * @LastEditTime: 2024-01-06 10:52:25
  */
 
 import { KoattyContext, Controller, Autowired,
@@ -28,11 +28,15 @@ export class _CLASS_NAME {
   }
 
   /**
-   * index 接口
-   *
-   * @param {string} data
-   * @returns
-   * @memberof _CLASS_NAME
+   * @api {get} / index接口
+   * @apiGroup Test
+   * 
+   * 
+   * @apiSuccessExample {json} Success
+   * {"code":1,"message":"","data":{}}
+   * 
+   * @apiErrorExample {json} Error
+   * {"code":0,"message":"错误信息","data":null}
    */
   @RequestMapping('/')
   index(@RequestBody() body: string): Promise<any> {
