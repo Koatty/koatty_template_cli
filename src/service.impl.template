@@ -1,9 +1,9 @@
 /*
- * @Description: 逻辑实现层
+ * @Description: 逻辑接口层
  * @Usage: 
  * @Author: xxx
  * @Date: 2020-12-22 15:24:25
- * @LastEditTime: 2024-01-07 12:50:08
+ * @LastEditTime: 2024-01-07 12:51:15
  */
 
 import { Service } from "koatty";
