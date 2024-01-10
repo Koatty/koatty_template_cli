@@ -3,7 +3,7 @@
  * @Usage: 
  * @Author: xxx
  * @Date: 2020-12-22 15:24:25
- * @LastEditTime: 2024-01-04 05:42:30
+ * @LastEditTime: 2024-01-10 21:08:41
  */
 import { Component } from 'koatty';
 import { App } from '_SUB_PATH/App';
@@ -72,13 +72,13 @@ export class _CLASS_NAME {
   }
 
   /**
-   * Save
-   * @param entities 
-   * @param options 
-   * @returns 
+   * @description: Update           
+   * @param {UserTokenEntity} entity
+   * @param {FindOptionsWhere} where
+   * @return {*}
    */
-  Save(entities: _ENTITY_NAME[], options?: SaveOptions) {
-    return _ENTITY_NAME.save(entities, options);
+  Update(entity: UserTokenEntity, where: FindOptionsWhere<UserTokenEntity>) {
+    return UserTokenEntity.update(where, entity);
   }
 
   /**
