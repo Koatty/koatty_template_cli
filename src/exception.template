@@ -3,42 +3,31 @@
  * @Usage: 
  * @Author: richen
  * @Date: 2022-02-14 11:26:20
- * @LastEditTime: 2024-01-05 06:50:04
+ * @LastEditTime: 2024-02-02 15:47:12
  */
 
-import { Exception, ExceptionHandler, KoattyContext } from "koatty";
+import { Exception, ExceptionHandler, KoattyContext, Logger } from "koatty";
 
 @ExceptionHandler()
-export class _CLASS_NAME extends Exception {
+export class BussinessException extends Exception {
   async handler(ctx: KoattyContext): Promise<any> {
-    ctx.status = this.status;
-    this.message = this.message || ctx.message;
-    // if (ctx.protocol !== "grpc") {
-    //   // api mode the status always be 200
-    //   if (this.code <= 1) {
-    //     this.code = this.status;
-    //   }
-    //   ctx.status = 200;
-    // }
-
-    ctx.type = "application/json";
-    const body: any = JSON.stringify(ctx.body || null);
-    switch (ctx.protocol) {
-      case "ws":
-      case "wss":
-        if (ctx.websocket) {
-          ctx.websocket.send(body);
-          ctx.websocket.emit('finish');
-        }
-        break;
-      case "grpc":
-        if (ctx.rpc && ctx.rpc.callback) {
-          ctx.rpc.callback(null, body);
-        }
-        break;
-      default:
-        ctx.res.end(`{"code": ${this.code}, "message": "${this.message}", "data": ${body}}`);
-        break;
+    try {
+      ctx.status = this.status || ctx.status;
+      if (ctx.protocol !== "grpc") {
+        // api mode the status always be 200
+        ctx.status = 200;
+      }
+      // LOG
+      this.log(ctx);
+      let contentType = 'application/json';
+      if (ctx.encoding !== false) {
+        contentType = `${contentType}; charset=${ctx.encoding}`;
+      }
+      ctx.type = contentType;
+      const body = JSON.stringify(ctx.body || "");
+      return this.output(ctx, body);
+    } catch (error) {
+      Logger.Error(error);
     }
   }
 }

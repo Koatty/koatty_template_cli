@@ -3,7 +3,7 @@
  * @Usage: 接收处理路由参数
  * @Author: xxx
  * @Date: 2020-12-22 15:24:25
- * @LastEditTime: 2024-01-06 10:59:54
+ * @LastEditTime: 2024-02-02 15:46:48
  */
 
 import { KoattyContext, Controller, Autowired, GetMapping,
