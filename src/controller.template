@@ -3,7 +3,7 @@
  * @Usage: 接收处理路由参数
  * @Author: xxx
  * @Date: 2020-12-22 15:24:25
- * @LastEditTime: 2024-02-02 15:46:48
+ * @LastEditTime: 2024-03-15 10:50:59
  */
 
 import { KoattyContext, Controller, Autowired, GetMapping,
@@ -38,8 +38,8 @@ export class _CLASS_NAME {
    * {"code":0,"message":"错误信息","data":null}
    */
   @GetMapping('/')
-  index(): Promise<any> {
-    return Output.ok(this.ctx, 'Hi Koatty');
+  index() {
+    return Output.ok('Hi Koatty');
   }
 
 }

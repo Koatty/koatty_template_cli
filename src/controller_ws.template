@@ -3,7 +3,7 @@
  * @Usage: 接收处理路由参数
  * @Author: xxx
  * @Date: 2020-12-22 15:24:25
- * @LastEditTime: 2024-01-06 10:52:25
+ * @LastEditTime: 2024-03-15 10:51:13
  */
 
 import { KoattyContext, Controller, Autowired,
@@ -39,8 +39,8 @@ export class _CLASS_NAME {
    * {"code":0,"message":"错误信息","data":null}
    */
   @RequestMapping('/')
-  index(@RequestBody() body: string): Promise<any> {
-    return this.ok('Hi Koatty');
+  index(@RequestBody() body: string) {
+    return this.ok('Hi Koatty', body);
   }
 
 }
