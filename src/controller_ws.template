@@ -3,11 +3,11 @@
  * @Usage: 接收处理路由参数
  * @Author: xxx
  * @Date: 2020-12-22 15:24:25
- * @LastEditTime: 2024-03-15 10:51:13
+ * @LastEditTime: 2024-03-15 10:58:04
  */
 
 import { KoattyContext, Controller, Autowired,
- RequestMapping, RequestBody } from 'koatty';
+ RequestMapping, RequestBody, Output } from 'koatty';
 import { App } from '_SUB_PATH/App';
 // import { TestService } from '_SUB_PATH/service/TestService';
 
@@ -40,7 +40,7 @@ export class _CLASS_NAME {
    */
   @RequestMapping('/')
   index(@RequestBody() body: string) {
-    return this.ok('Hi Koatty', body);
+    return Output.ok('Hi Koatty', body);
   }
 
 }
