@@ -1,0 +1,14 @@
+type Query {
+    SayHello(id: ID!): User!
+}
+
+# type Mutation {
+#     createUser(input: UserInput!): User!
+# }
+
+# type User {
+#     id: ID!
+#     username: String!
+#     email: String!
+#     createdAt: String!
+# }
