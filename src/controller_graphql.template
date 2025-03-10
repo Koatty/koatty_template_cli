@@ -1,0 +1,30 @@
+/*
+ * @Description: 业务层
+ * @Usage: 接收处理路由参数
+ * @Author: xxx
+ * @Date: 2020-12-22 15:24:25
+ * @LastEditTime: 2025-02-28 16:14:28
+ */
+
+import { KoattyContext, Controller, Autowired,
+ PostMapping, Post } from 'koatty';
+import { Valid, Validated } from "koatty_validation";
+import { App } from '_SUB_PATH/App';
+//_IMPORT_LIST Important! Do not delete this line
+
+@Controller('_NEW') // Consistent with graphql name
+export class _CLASS_NAME {
+  app: App;
+  ctx: KoattyContext;
+
+  /**
+   * constructor
+   *
+   */
+  constructor(ctx: KoattyContext) {
+    this.ctx = ctx;
+  }
+
+  //_METHOD_LIST Important! Do not delete this line
+
+}
