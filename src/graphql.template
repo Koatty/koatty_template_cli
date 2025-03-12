@@ -1,14 +1,21 @@
 type Query {
-    SayHello(id: ID!): User!
+    getUser(id: ID!): User!
 }
 
-# type Mutation {
-#     createUser(input: UserInput!): User!
-# }
+type Mutation {
+    createUser(input: UserInput!): User!
+}
 
-# type User {
-#     id: ID!
-#     username: String!
-#     email: String!
-#     createdAt: String!
-# }
+type User {
+    id: ID!
+    username: String!
+    email: String!
+    createdAt: String!
+}
+
+input UserInput {
+    id: ID!, 
+    username: String!
+    email: String!
+    password: String!
+}
