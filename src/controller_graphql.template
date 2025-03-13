@@ -12,7 +12,7 @@ import { Valid, Validated } from "koatty_validation";
 import { App } from '_SUB_PATH/App';
 //_IMPORT_LIST Important! Do not delete this line
 
-@Controller() // Consistent with graphql name
+@Controller('/graphql') // Consistent with graphql name
 export class _CLASS_NAME {
   app: App;
   ctx: KoattyContext;
