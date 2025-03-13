@@ -7,7 +7,7 @@
  */
 
 import { KoattyContext, Controller, Autowired,
- PostMapping, Post, Get } from 'koatty';
+ GetMapping, PostMapping, Post, Get } from 'koatty';
 import { Valid, Validated } from "koatty_validation";
 import { App } from '_SUB_PATH/App';
 //_IMPORT_LIST Important! Do not delete this line
