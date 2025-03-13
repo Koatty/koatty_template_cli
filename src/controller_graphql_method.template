@@ -1,6 +1,6 @@
 
 
-  @_METHOD_DECORATOR('/_METHOD_NAME')_VALIDATED
+  _VALIDATED
   async _METHOD_NAME(_ARGS): Promise<_RETURN_TYPE> {
     const result = _RESULT_TYPE;
     // TODO: Implement business logic here
