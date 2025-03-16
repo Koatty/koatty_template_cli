@@ -3,11 +3,11 @@
  * @Usage: 接收处理路由参数
  * @Author: xxx
  * @Date: 2020-12-22 15:24:25
- * @LastEditTime: 2025-03-15 17:08:29
+ * @LastEditTime: 2025-03-16 21:08:37
  */
 
 import { KoattyContext, GraphQLController, Autowired,
- GetMapping, GetMapping, PostMapping, RequestParam } from 'koatty';
+ PostMapping, RequestParam } from 'koatty';
 import { Valid, Validated } from "koatty_validation";
 import { App } from '_SUB_PATH/App';
 //_IMPORT_LIST Important! Do not delete this line
