@@ -3,15 +3,15 @@
  * @Usage: 接收处理路由参数
  * @Author: xxx
  * @Date: 2020-12-22 15:24:25
- * @LastEditTime: 2024-03-15 10:58:04
+ * @LastEditTime: 2025-03-15 16:57:29
  */
 
-import { KoattyContext, Controller, Autowired,
+import { KoattyContext, WebSocketController, Autowired,
  RequestMapping, RequestBody, Output } from 'koatty';
 import { App } from '_SUB_PATH/App';
 // import { TestService } from '_SUB_PATH/service/TestService';
 
-@Controller('_NEW')
+@WebSocketController('_NEW')
 export class _CLASS_NAME {
   app: App;
   ctx: KoattyContext;
