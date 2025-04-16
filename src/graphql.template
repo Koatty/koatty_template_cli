@@ -14,7 +14,7 @@ type User {
 }
 
 input UserInput {
-    id: ID!, 
+    id: ID!
     username: String!
     email: String!
     password: String!
